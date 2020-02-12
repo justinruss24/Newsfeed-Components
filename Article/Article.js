@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'This is a Brand New Article',
+    date: 'Feb 12, 2020',
+    firstParagraph: `Lorem ipsum dolor amet vaporware actually echo park, unicorn air plant before they sold out la croix mumblecore bushwick. Ugh vice sriracha iceland, man bun heirloom chillwave cray semiotics 3 wolf moon pickled austin poke. Hammock tacos synth, listicle pop-up microdosing seitan iceland kickstarter vexillologist PBR&B biodiesel master cleanse next level trust fund. Activated charcoal truffaut tofu tilde glossier waistcoat. Shabby chic seitan messenger bag pork belly cliche scenester polaroid hexagon hella. Thundercats raw denim dreamcatcher activated charcoal.`,
+
+    secondParagraph: `Glossier bicycle rights live-edge, food truck flexitarian letterpress fingerstache tilde jianbing post-ironic neutra. Semiotics taxidermy air plant mustache, narwhal hella vaporware bespoke food truck synth asymmetrical. Selvage umami roof party taxidermy tilde. IPhone banh mi +1 hella hot chicken church-key selvage quinoa. Literally godard mumblecore, freegan activated charcoal woke bushwick drinking vinegar kitsch deep v. Hella single-origin coffee butcher vinyl locavore wolf beard meggings. Succulents bicycle rights chicharrones flexitarian umami tote bag farm-to-table adaptogen.`,
+
+    thirdParagraph: `Squid vinyl fanny pack sustainable leggings man bun tote bag before they sold out. Neutra helvetica everyday carry 90's keytar iPhone butcher mixtape activated charcoal waistcoat four dollar toast. Hot chicken direct trade man bun actually, organic tumeric skateboard marfa. Blog YOLO XOXO roof party chia, man braid pok pok. Edison bulb kickstarter asymmetrical, wayfarers lomo lo-fi enamel pin mixtape gochujang distillery unicorn yr.`
   }
 ];
 
@@ -100,6 +109,7 @@ const data = [
   </div>
 
   Hint: You will need to use createElement more than once here!
+  
 
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
 
@@ -112,3 +122,46 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+function newArticle(item) {
+  //create new elements
+  const article = document.createElement('div');
+  const title = document.createElement('h2');
+  const date = document.createElement('p');
+  const first = document.createElement('p');
+  const second = document.createElement('p');
+  const third = document.createElement('p');
+  const button = document.createElement('span');
+
+  //set up the structure
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(first);
+  article.appendChild(second);
+  article.appendChild(third);
+  article.appendChild(button);
+
+  //add classes to elements
+  article.classList.add('article');
+  date.classList.add('date');
+  button.classList.add('expandButton');
+
+  //set text content
+  title.textContent = item.title;
+  date.textContent = item.date;
+  first.textContent = item.firstParagraph;
+  second.textContent = item.secondParagraph;
+  third.textContent = item.thirdParagraph;
+  button.textContent = 'ReadMe!';
+
+  button.addEventListener('click', () => {
+    article.classList.toggle('article-open')
+  })
+
+  return article;
+}
+
+const container = document.querySelector('.articles');
+
+data.forEach(item => {
+  container.appendChild(newArticle(item));
+});

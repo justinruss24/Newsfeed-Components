@@ -85,6 +85,15 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'This is a Brand New Article',
+    date: 'Feb 12, 2020',
+    firstParagraph: `Lorem ipsum dolor amet vaporware actually echo park, unicorn air plant before they sold out la croix mumblecore bushwick. Ugh vice sriracha iceland, man bun heirloom chillwave cray semiotics 3 wolf moon pickled austin poke. Hammock tacos synth, listicle pop-up microdosing seitan iceland kickstarter vexillologist PBR&B biodiesel master cleanse next level trust fund. Activated charcoal truffaut tofu tilde glossier waistcoat. Shabby chic seitan messenger bag pork belly cliche scenester polaroid hexagon hella. Thundercats raw denim dreamcatcher activated charcoal.`,
+
+    secondParagraph: `Glossier bicycle rights live-edge, food truck flexitarian letterpress fingerstache tilde jianbing post-ironic neutra. Semiotics taxidermy air plant mustache, narwhal hella vaporware bespoke food truck synth asymmetrical. Selvage umami roof party taxidermy tilde. IPhone banh mi +1 hella hot chicken church-key selvage quinoa. Literally godard mumblecore, freegan activated charcoal woke bushwick drinking vinegar kitsch deep v. Hella single-origin coffee butcher vinyl locavore wolf beard meggings. Succulents bicycle rights chicharrones flexitarian umami tote bag farm-to-table adaptogen.`,
+
+    thirdParagraph: `Squid vinyl fanny pack sustainable leggings man bun tote bag before they sold out. Neutra helvetica everyday carry 90's keytar iPhone butcher mixtape activated charcoal waistcoat four dollar toast. Hot chicken direct trade man bun actually, organic tumeric skateboard marfa. Blog YOLO XOXO roof party chia, man braid pok pok. Edison bulb kickstarter asymmetrical, wayfarers lomo lo-fi enamel pin mixtape gochujang distillery unicorn yr.`
   }
 ];
 
